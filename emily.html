@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emily – Mirror 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Spectral&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="emily.css" />
+</head>
+<body class="emily-scene">
+  <a href="index.html#left" class="back-to-hallway-btn">Back to Hallway</a>
+
+  <div class="emily-container">
+    <div class="emily-bg-swirling"></div>
+    <img src="images/emily.png" alt="Emily" class="emily-image" />
+  </div>
+
+  <div class="subtitle-bar">
+    <div class="subtitle-name">Emily</div>
+    <div class="nav-arrow left" id="prev-arrow">&#10094;</div>
+    <div class="subtitle-text" id="emily-subtitle"></div>
+    <div class="nav-arrow right" id="next-arrow">&#10095;</div>
+  </div>
+
+  <div class="video-overlay hidden" id="emily-video-container">
+    <video id="emily-video" src="videos/emilyscenario.mp4" autoplay muted></video>
+    <div class="video-nav">
+      <button id="skip-video-btn">Skip</button>
+    </div>
+  </div>
+
+  <script src="emily.js"></script>
+</body>
+</html>

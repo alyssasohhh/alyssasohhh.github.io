@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jack’s Mirror</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="jack.css" />
+  <script src="jack.js" defer></script>
+</head>
+<body class="jack-scene">
+  <!-- ✅ Only one properly closed back button -->
+  <a href="index.html#left" class="back-to-hallway-btn">Back to Hallway</a>
+
+  <!-- Jack Scene -->
+  <div class="jack-container" id="jack-container">
+    <div class="jack-bg-swirling"></div>
+    <img src="images/jack.png" alt="Jack" class="jack-image" />
+
+    <div class="subtitle-bar" id="subtitle-bar">
+      <div class="nav-arrow left">‹</div>
+      <div class="subtitle-name">Jack</div>
+      <div class="subtitle-text"></div>
+      <div class="nav-arrow right">›</div>
+    </div>
+  </div>
+
+  <!-- Video overlay -->
+  <div id="video-overlay" class="video-overlay hidden">
+    <video id="jack-video" src="videos/jackscenario.mp4" muted></video>
+    <div class="video-controls">
+      <button id="skip-video-btn">Skip</button>
+    </div>
+  </div>
+</body>
+</html>

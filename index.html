@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mirror Realities</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=VT323&family=Cristik&family=Cinzel+Decorative:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="screen" class="title-screen">
+    <div id="text-overlay"></div>
+
+    <div id="text-content">
+      <h1 id="main-title">Mirror Realities</h1>
+      <div id="subtitle-container"><p id="subtitle"></p></div>
+      <button id="start-btn">Start Your Journey</button>
+    </div>
+
+    <div id="subtitle-box" class="hidden">
+      <p id="narration-text"></p>
+      <div id="arrow-controls">
+        <span id="prev-subtitle" class="arrow hidden">&#9664;</span>
+        <span id="next-subtitle" class="arrow">&#9654;</span>
+      </div>
+    </div>
+
+    <div id="keeper-container" class="hidden">
+      <div id="keeper-floating-wrapper">
+        <img src="images/keeper.png" alt="Keeper of Truths" id="keeper" />
+      </div>
+    </div>
+
+    <div id="wall-choice" class="hidden">
+      <!-- "I have seen enough" button placed above left/right buttons -->
+      <button id="force-proceed-btn" class="golden-button hidden">I have seen enough, let me face my own mirror</button>
+
+      <!-- Left and Right buttons container -->
+      <div id="left-right-buttons">
+        <button id="look-left">Look to the Left Wall</button>
+        <button id="look-right">Look to the Right Wall</button>
+      </div>
+    </div>
+
+    <!-- Left Wall Scene -->
+    <div id="left-wall-scene" class="hidden wall-scene">
+      <img src="images/leftside.jpg" alt="Left Wall" class="wall-bg" />
+      <a class="mirror-entry-btn blue-btn" href="jack.html" style="top: 30%; left: 17%;">Enter Mirror 1</a>
+      <a class="mirror-entry-btn pink-btn" href="emily.html" style="top: 30%; left: 62%;">Enter Mirror 2</a>
+      <button class="back-to-hall-btn" id="back-from-left">Back to Hallway</button>
+    </div>
+
+    <!-- Right Wall Scene -->
+    <div id="right-wall-scene" class="hidden wall-scene">
+      <img src="images/rightside.jpg" alt="Right Wall" class="wall-bg" />
+      <a class="mirror-entry-btn purple-btn" href="may.html" style="top: 30%; left: 17%;">Enter Mirror 3</a>
+      <a class="mirror-entry-btn green-btn" href="liam.html" style="top: 30%; left: 62%;">Enter Mirror 4</a>
+      <button class="back-to-hall-btn" id="back-from-right">Back to Hallway</button>
+    </div>
+  </div>
+
+  <!-- Golden Completion Button (initially hidden) -->
+  <button id="completion-btn" class="golden-button hidden">You have completed all 4 mirrors</button>
+
+  <!-- Keeper Message Container -->
+  <div id="keeper-sequence" class="keeper-sequence hidden">
+    <img src="images/keeper.png" alt="Keeper" class="keeper-return" />
+    <div id="keeper-text" class="keeper-dialogue"></div>
+
+    <div class="final-choice-buttons">
+      <button id="proceed-btn" class="final-btn">I’m ready to proceed</button>
+      <button id="keeper-review-btn" class="final-btn">I’m not ready, let me review</button>
+    </div>
+  </div>
+
+  <!-- Your Mirror Section -->
+  <div id="your-mirror-section" class="your-mirror-section hidden">
+    <img src="images/yourmirror.png" alt="Your Mirror" class="your-mirror" />
+    <button id="enter-your-mirror-btn" class="golden-button">Enter Your Own Mirror</button>
+  </div>
+
+  <div id="quiz-intro" class="hidden">
+    <!-- Quiz intro content -->
+    <button id="quiz-ready-btn">I'm Ready to Proceed</button>
+    <button id="quiz-review-btn">I'm Not Ready, Let Me Review</button>
+  </div>
+
+  <div id="quiz-container" class="hidden">
+    <!-- Your quiz questions, retry button, etc. -->
+    <button id="retry-btn">Retry</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
