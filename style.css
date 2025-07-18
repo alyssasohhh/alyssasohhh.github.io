@@ -132,7 +132,8 @@ body {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 500px;
+  width: 960px;
+  height: 450px;
   text-align: center;
   z-index: 3;
   opacity: 0;
