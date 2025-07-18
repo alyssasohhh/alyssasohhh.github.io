@@ -1,0 +1,360 @@
+/* === Global Styles === */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'VT323', monospace;
+  background: url('images/main-screen.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+}
+
+#text-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 1s ease;
+}
+
+#text-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#text-content {
+  position: fixed;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  transition: opacity 1s ease;
+}
+
+#main-title {
+  font-family: 'Cristik', sans-serif;
+  font-size: 96px;
+  animation: glitch 1.5s infinite;
+  color: white;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #8ff, -2px 0 #f0f;
+  }
+  20% {
+    text-shadow: -2px 0 #f0f, 2px 0 #8ff;
+  }
+  40% {
+    text-shadow: 2px 0 #f0f, -2px 0 #8ff;
+  }
+  60% {
+    text-shadow: -2px 0 #8ff, 2px 0 #f0f;
+  }
+  80% {
+    text-shadow: 1px 0 #f0f, -1px 0 #8ff;
+  }
+  100% {
+    text-shadow: 0 0 #000;
+  }
+}
+
+#subtitle-container {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  font-size: 40px;
+  text-align: center;
+  min-height: 60px;
+}
+
+#start-btn {
+  font-family: 'VT323', monospace;
+  padding: 14px 28px;
+  font-size: 32px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+}
+
+#start-btn:hover {
+  box-shadow: 0 0 35px white;
+  transform: scale(1.1);
+}
+
+#subtitle-box {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 22px;
+  z-index: 4;
+  opacity: 0;
+  max-width: 90vw;
+  text-align: center;
+  transition: opacity 1s ease;
+}
+
+#subtitle-box.animate {
+  opacity: 1;
+}
+
+.arrow {
+  font-size: 28px;
+  margin: 0 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#keeper-container {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  text-align: center;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  animation: floatY 6s ease-in-out infinite;
+  margin: 0;
+  padding: 0;
+}
+
+#keeper-container.fade-in {
+  opacity: 1;
+}
+
+#keeper-container.fade-out {
+  opacity: 0;
+}
+
+#keeper {
+  width: 100%;
+  max-width: 500px;
+  opacity: 0.9;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes floatY {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Wall Choice container */
+#wall-choice {
+  position: fixed;
+  bottom: 90px; /* higher so "I have seen enough" fits above */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: none;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: opacity 1s ease;
+}
+
+#wall-choice.visible {
+  display: flex;
+  opacity: 1;
+}
+
+/* "I have seen enough" button styles - updated font and margin */
+#force-proceed-btn {
+  background: linear-gradient(90deg, #b8860b, #ffd700, #ffec8b);
+  border: none;
+  color: black;
+  font-family: 'Spectral', serif;
+  font-size: 1.3rem;
+  padding: 14px 38px;
+  border-radius: 14px;
+  box-shadow:
+    0 0 15px #b8860b,
+    0 0 30px #ffd700,
+    0 0 40px #ffec8b;
+  cursor: pointer;
+  transition: none;
+  user-select: none;
+  width: 320px;
+  max-width: 90vw;
+  text-shadow: 1px 1px 3px #fff8dc;
+  margin-bottom: 60px; /* Increased to push button higher */
+  /* Remove transform on hover */
+}
+
+#force-proceed-btn:hover {
+  /* No movement or shadow changes on hover */
+  box-shadow:
+    0 0 20px #b8860b,
+    0 0 40px #ffd700,
+    0 0 50px #ffec8b;
+  transform: none;
+}
+
+/* Left and Right buttons container - horizontal side by side */
+#left-right-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* Left and Right buttons container - horizontal side by side */
+#left-right-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* Left and Right wall buttons styles - updated to Spectral font, white text, subtle black bg */
+#look-left,
+#look-right {
+  font-family: 'Spectral', serif;
+  font-size: 1.3rem;
+  padding: 14px 38px;
+  background: rgba(0, 0, 0, 0.6); /* subtle transparent black */
+  border: none;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px white;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  flex: 1;
+  max-width: 320px;
+  text-align: center;
+  text-shadow: 0 0 8px white;
+}
+
+#look-left:hover,
+#look-right:hover {
+  box-shadow:
+    0 0 20px white,
+    0 0 40px white,
+    0 0 50px white;
+  transform: scale(1.05);
+}
+
+.wall-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 5;
+}
+
+.wall-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mirror-entry-btn {
+  position: absolute;
+  padding: 12px 24px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  box-shadow: 0 0 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.mirror-entry-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px white;
+}
+
+.blue-btn {
+  background: rgba(102, 204, 255, 0.9);
+  box-shadow: 0 0 20px rgba(102, 204, 255, 0.8);
+}
+
+.pink-btn {
+  background: rgba(255, 153, 204, 0.9);
+  box-shadow: 0 0 20px rgba(255, 153, 204, 0.8);
+}
+
+.purple-btn {
+  background: rgba(178, 102, 255, 0.9);
+  box-shadow: 0 0 20px rgba(178, 102, 255, 0.8);
+}
+
+.green-btn {
+  background: rgba(102, 255, 178, 0.9);
+  box-shadow: 0 0 20px rgba(102, 255, 178, 0.8);
+}
+
+.back-to-hall-btn {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  padding: 14px 28px;
+  background: rgba(255, 204, 102, 0.9);
+  border: none;
+  border-radius: 16px;
+  color: black;
+  font-family: 'Cristik', sans-serif;
+  box-shadow: 0 0 25px rgba(255, 204, 102, 1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-hall-btn:hover {
+  box-shadow: 0 0 40px rgba(255, 204, 102, 1);
+  transform: scale(1.1);
+}
+
+/* Golden button base class */
+.golden-button {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+/* Golden subtitle style */
+.golden-subtitle {
+  color: goldenrod; /* Or any gold shade you prefer */
+  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffbf00; /* subtle glow effect */
+  font-weight: bold;
+}

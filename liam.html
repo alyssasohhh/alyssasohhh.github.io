@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liam’s Mirror</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="liam.css" />
+  <script src="liam.js" defer></script>
+</head>
+<body class="liam-scene">
+  <a href="index.html#right" class="back-to-hallway-btn">Back to Hallway</a>
+
+  <div class="liam-container" id="liam-container">
+    <div class="liam-bg-swirling"></div>
+    <img src="images/liam.png" alt="Liam" class="liam-image" />
+
+    <div class="subtitle-bar" id="subtitle-bar">
+      <div class="nav-arrow left">&#9664;</div>
+      <div class="subtitle-name">Liam</div>
+      <div class="subtitle-text"></div>
+      <div class="nav-arrow right">&#9654;</div>
+    </div>
+  </div>
+
+  <div id="video-overlay" class="video-overlay hidden">
+    <video id="liam-video" src="videos/liamscenario.mp4" muted></video>
+    <button class="skip-video-btn" id="skip-video-btn">Skip</button>
+    <div class="video-nav">
+      <span class="nav-arrow right">&#9654;</span>
+    </div>
+  </div>
+</body>
+</html>

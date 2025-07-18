@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Mirror Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Spectral&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body class="quiz-scene">
+  <!-- Intro Section (Unchanged) -->
+  <div id="intro-section" class="full-screen">
+    <img src="images/main-screen.jpg" class="background" alt="Main Background" />
+    <img src="images/keeper.png" class="keeper keeper-float keeper-intro" alt="Keeper" />
+
+    <div id="subtitle-box" class="gold-subtitle-box">
+      <span class="name-label">Keeper</span>
+      <span id="subtitle-text" class="subtitle-text"></span>
+      <button id="next-line-btn" title="Next" aria-label="Next subtitle line">&rarr;</button>
+    </div>
+
+    <div class="quiz-buttons">
+      <button id="review-btn" class="golden-btn">I'm not ready, let me review</button>
+      <button id="proceed-btn" class="golden-btn">I'm ready to proceed</button>
+    </div>
+  </div>
+
+  <!-- Mirror Transition Section (Unchanged) -->
+  <div id="mirror-section" class="hidden full-screen">
+    <img src="images/main-screen.jpg" class="background" alt="Main Background" />
+    <img src="images/yourmirror.png" id="your-mirror" alt="Your Mirror" />
+    <button id="enter-mirror-btn" class="golden-btn on-mirror">Enter Your Mirror</button>
+  </div>
+
+  <!-- Quiz Section (Updated layout) -->
+  <div id="quiz-section" class="hidden full-screen">
+    <img src="images/goldenbg.png" class="background" alt="Golden Background" />
+    <img src="images/keeper.png" class="keeper keeper-float" id="quiz-keeper" alt="Keeper" />
+    <div id="score-counter">Score: 0</div>
+
+    <!-- Subtitle box: Keeper’s comment after answer -->
+    <div id="quiz-subtitle-box" class="gold-subtitle-box hidden">
+      <span class="name-label">Keeper</span>
+      <span id="quiz-subtitle" class="subtitle-text"></span>
+      <button id="next-explanation-btn" title="Next" aria-label="Next explanation line">&rarr;</button>
+    </div>
+
+    <!-- Question number and box -->
+    <div class="quiz-content-wrapper">
+      <div id="question-number" class="question-number"></div>
+      <div class="quiz-question-box" id="quiz-question-box">
+        <div id="question-text" class="question-text"></div>
+        <div class="quiz-options">
+          <button class="quiz-option" id="optionA"></button>
+          <button class="quiz-option" id="optionB"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ending Section (Updated layout) -->
+  <div id="ending-section" class="hidden full-screen">
+    <img id="ending-bg" class="background" alt="Ending Background" />
+    <img src="images/keeper.png" class="keeper keeper-float" alt="Keeper" />
+    <div id="final-subtitle-box" class="gold-subtitle-box">
+      <span class="name-label">Keeper</span>
+      <span id="final-subtitle" class="subtitle-text"></span>
+    </div>
+    <div id="final-score" class="final-score"></div>
+    <div class="final-buttons">
+  <button id="retry-btn" class="golden-btn hidden">Try Again</button>
+</div>
+  </div>
+
+  <!-- Flash effect for right/wrong -->
+  <div id="flash-effect"></div>
+
+  <!-- Sounds -->
+  <audio id="correct-sound" src="assets/correct.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="assets/wrong.mp3" preload="auto"></audio>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
