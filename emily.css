@@ -10,9 +10,10 @@ body.emily-scene {
 }
 
 .emily-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .emily-bg-swirling {
@@ -30,7 +31,8 @@ body.emily-scene {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-height: 80vh;
+  height: 70vh;
+  object-fit: contain;
   animation: float 6s ease-in-out infinite;
 }
 
