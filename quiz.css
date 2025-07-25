@@ -474,3 +474,11 @@ body.quiz-scene {
   max-height: 100px;
   overflow-y: auto;
 }
+#quiz-keeper {
+  width: 700px !important;
+  height: auto !important;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+}
