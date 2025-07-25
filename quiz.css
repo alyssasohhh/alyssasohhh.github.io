@@ -42,15 +42,15 @@ body.quiz-scene {
 /* Keeper styling */
 .keeper {
   position: absolute;
-  width: 360px;            /* Bigger size */
-  bottom: 40px;            /* Lower so it doesn't overlap subtitles */
+   width: 540px; /* Increase from 540px */
+  bottom: 20px;      /* Lower so it doesn't overlap subtitles */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
 
 .keeper-intro {
-  width: 380px; /* Slightly bigger for intro */
+  width: 540px; /* Slightly bigger for intro */
   bottom: 30px;
 }
 
