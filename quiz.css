@@ -475,20 +475,22 @@ body.quiz-scene {
   overflow-y: auto;
 }
 #quiz-keeper {
-  width: 700px !important;
-  height: auto !important;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 1000px; /* Try 1000px or larger! */
+  max-width: 90vw; /* Make sure it scales on smaller screens */
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.keeper-float {
+  animation: float 5s ease-in-out infinite;
 }
 
-#quiz-keeper {
-  width: 850px !important;
-  height: auto !important;
-  max-width: none !important;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-15px); }
 }
