@@ -482,3 +482,13 @@ body.quiz-scene {
   position: absolute;
   z-index: 1;
 }
+
+#quiz-keeper {
+  width: 850px !important;
+  height: auto !important;
+  max-width: none !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
