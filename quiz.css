@@ -42,8 +42,8 @@ body.quiz-scene {
 /* Keeper styling */
 .keeper {
   position: absolute;
-  width: 600px !important; /* smaller so head isn't cut off */
-  max-width: 60vw; /* responsive scaling */
+  width: 450px !important; /* smaller so head isn't cut off */
+  max-width: 45vw; /* match proportionally with width change */
   height: auto !important;
   left: 50%;
   top: 55%; /* lowered slightly */
@@ -52,8 +52,8 @@ body.quiz-scene {
 }
 
 .keeper-intro {
-  width: 600px !important; /* same size for intro */
-  max-width: 60vw;
+  width: 450px !important; /* same size for intro */
+  max-width: 45vw;
   height: auto !important;
   top: 55%; /* same position so consistent framing */
 }
