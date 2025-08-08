@@ -52,7 +52,6 @@ body.quiz-scene {
 .keeper-intro {
   width: 700px !important;
   height: auto !important; Slightly bigger for intro */
-  bottom: 30px;
 }
 
 /* Floating animation */
