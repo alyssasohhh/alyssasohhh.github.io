@@ -42,22 +42,21 @@ body.quiz-scene {
 /* Keeper styling */
 .keeper {
   position: absolute;
-  width: 700px !important; /* unified size */
-  max-width: 85vw; /* responsive scaling */
+  width: 600px !important; /* smaller so head isn't cut off */
+  max-width: 60vw; /* responsive scaling */
   height: auto !important;
   left: 50%;
-  top: 52%; /* consistent centering */
+  top: 55%; /* lowered slightly */
   transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 .keeper-intro {
-  width: 700px !important; /* same size as quiz */
-  max-width: 85vw;
+  width: 600px !important; /* same size for intro */
+  max-width: 60vw;
   height: auto !important;
-  top: 50%; /* lowered from default so head isn't cut off */
+  top: 55%; /* same position so consistent framing */
 }
-
 /* Floating animation */
 .keeper-float {
   animation: float 5s ease-in-out infinite; /* updated from 3s */
