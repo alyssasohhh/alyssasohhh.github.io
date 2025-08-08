@@ -42,7 +42,7 @@ body.quiz-scene {
 /* Keeper styling */
 .keeper {
   position: absolute;
-  width: 900px !important; /* unified size */
+  width: 700px !important; /* unified size */
   max-width: 85vw; /* responsive scaling */
   height: auto !important;
   left: 50%;
@@ -52,7 +52,7 @@ body.quiz-scene {
 }
 
 .keeper-intro {
-  width: 900px !important; /* same size as quiz */
+  width: 700px !important; /* same size as quiz */
   max-width: 85vw;
   height: auto !important;
   top: 50%; /* lowered from default so head isn't cut off */
