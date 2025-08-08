@@ -42,26 +42,29 @@ body.quiz-scene {
 /* Keeper styling */
 .keeper {
   position: absolute;
-   width: 700px !important;
-  height: auto !important;    /* Lower so it doesn't overlap subtitles */
+  width: 1000px !important; /* updated from 700px */
+  max-width: 90vw; /* responsive scaling */
+  height: auto !important;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 .keeper-intro {
-  width: 700px !important;
-  height: auto !important; Slightly bigger for intro */
+  width: 1000px !important; /* updated from 700px */
+  max-width: 90vw;
+  height: auto !important; /* Slightly bigger for intro */
 }
 
 /* Floating animation */
 .keeper-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite; /* updated from 3s */
 }
 
 @keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-15px); }
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-15px); }
 }
 
 /* ===== Subtitle box styling - golden, centered, raised a bit ===== */
@@ -135,7 +138,7 @@ body.quiz-scene {
 /* ===== Quiz buttons (I'm not ready / I'm ready) - raised higher ===== */
 .quiz-buttons {
   position: absolute;
-  bottom: 110px; /* Raised higher above arrows as requested */
+  bottom: 110px; /* Raised higher above arrows */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -441,6 +444,7 @@ body.quiz-scene {
   opacity: 1;
   pointer-events: auto;
 }
+
 /* === Quiz Top Left Question Counter === */
 #question-counter-btn {
   position: absolute;
@@ -472,21 +476,6 @@ body.quiz-scene {
 #final-subtitle-box {
   max-height: 100px;
   overflow-y: auto;
-}
-#quiz-keeper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px; /* Try 1000px or larger! */
-  max-width: 90vw; /* Make sure it scales on smaller screens */
-  height: auto;
-  z-index: 5;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
-.keeper-float {
-  animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
